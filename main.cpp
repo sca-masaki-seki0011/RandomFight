@@ -22,6 +22,11 @@ int main()
     cout << "君の名前を英語かローマ字で教えてくれ"<<endl;
     cout << "PLAYERNAME: ";
     cin >> playername;//playerの名前入力
+    //playerのステータス======================================
+    cout << playername << "のステータス" << endl;
+    cout << playername << "のHP :" << playerHP << endl;
+    cout << playername << "の攻撃力 :" << playerAtack << endl;
+    //========================================================
     cout << playername <<"よ、さあ行け!!" <<endl;
     cout << "バトルスタート!!!"<< endl;
     cout << "\n";
@@ -29,6 +34,11 @@ int main()
   {
     //playerとenemyのHPが0じゃなかったら
     while(enemyHP != 0 || playerHP != 0){
+    //敵のステータス==============================
+    cout << "敵のステータス" << endl;
+    cout << "敵のHP :" << enemyHP << endl;
+    cout << "敵の攻撃力 :" << enemyAtack << endl;
+    //============================================
     int enemyrandom = rand()%6+1;//enemyの整数を乱数で生成
     cout << "1~6までの整数を宣言しろ！！"<<endl;
     cout << "PLAYERNUMBER: ";
@@ -61,6 +71,7 @@ int main()
         cout << playername << "の勝利だ!!" << endl;
         enemycount++;//enemy撃破変数に+1
         cout << enemycount << "体目撃破!!" << endl;
+        cout << "\n";
         //enemyは倒されるたびに強い敵が襲い掛かってくるという
         //設定なのでenemyのHPと攻撃変数を増やしていく
         enemyHP = 20*enemycount*2;//enemyのHPが0に減ってるから
